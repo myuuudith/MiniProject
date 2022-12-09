@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import MovieBox from './MovieBox';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Navbar, Nav, Form, FormControl, Button, NavLink } from 'react-bootstrap';
+import { Container, Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 // import Login from './Login';
 // import { Route } from 'react-router-dom';
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const API_URL = " https://api.themoviedb.org/3/movie/popular?api_key=a00d4fd4b225e2adc882108fb6d69551";
-const API_SEARCH=" https://api.themoviedb.org/3/search/movie?api_key=a00d4fd4b225e2adc882108fb6d69551&query";
+// const API_SEARCH=" https://api.themoviedb.org/3/search/movie?api_key=a00d4fd4b225e2adc882108fb6d69551&query";
 
 function App() {
   const [movies, setMovies] = useState([]);
