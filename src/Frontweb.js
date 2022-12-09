@@ -42,6 +42,7 @@ function App() {
     setQuery(e.target.value);
   }
 
+
   return (
     <>
       <Navbar bg="dark" expand="lg" variant="dark">
@@ -60,7 +61,9 @@ function App() {
           <Button variant="dark" className='login-btn' href='/Login'>
 
             Login</Button>
-          
+            
+            <Button variant="dark" className='login-btn' href='/'>Logout</Button>
+
           <Navbar.Collapse id="nabarScroll">
             <Nav
               className="me-auto my-2 my-lg3"
@@ -93,6 +96,7 @@ function App() {
         </div>
 
       </div>
+      
     </>
   );
 }

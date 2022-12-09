@@ -31,8 +31,8 @@ function App() {
           console.log(requestToken);
           axios.post(`${process.env.REACT_APP_BASEURL}authentication/token/validate_with_login?api_key=${process.env.REACT_APP_APIKEY}`,
             {
-              username: values.username, // priambudi.lintang
-              password: values.password, // Fah63FaWT5e$4di
+              username: values.username, 
+              password: values.password, 
               request_token: requestToken
             }).then(res => {
               const validatedRequestToken = res.data.request_token
@@ -44,7 +44,7 @@ function App() {
                   const sessionID = res.data.session_id
                   console.log(sessionID);
                   localStorage.setItem('session', sessionID)
-                  navigate('/profile');
+                  navigate('/home');
                 })
             })
         })
@@ -67,12 +67,6 @@ function App() {
           {/* <NavLink href="/Login" style={{ color: 'red', fontSize: 20 }}>Login</NavLink> */}
           
           </Nav>
-        
-          {/* <Button variant="dark" className='login-btn' href='/Login'>
-
-            Login</Button> */}
-          
-          {/* <Navbar.Collapse id="nabarScroll"></Navbar.Collapse> */}
           </Container>
           </Navbar>
 
@@ -112,6 +106,7 @@ function App() {
       ) : null}
       <br />
       <button type="submit">Login</button>
+      
     </form >
     </>
   );
